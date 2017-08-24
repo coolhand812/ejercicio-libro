@@ -6,12 +6,12 @@ public class Libro
     private int paginas;
     private String numReferencia;
     
-    public Libro(String bkTitulo, String bkAutor, int bkPages)
+    public Libro(String bkTitulo, String bkAutor, int bkPages, String nmRef)
     {
         titulo = bkTitulo;
         autor = bkAutor;
         paginas = bkPages;
-        numReferencia = "";
+        numReferencia = nmRef;
     }
 
     String dimeAutor()
@@ -52,7 +52,11 @@ public class Libro
     
     String cambiaNumRef(String nRef)
     {
-        numReferencia = nRef;
+        int counter = nRef.length();
+        if(counter > 3)
+        {
+            numReferencia = nRef;
+        }
         return numReferencia;
     }
     
