@@ -10,5 +10,13 @@ public class Libro
         autor = bkAutor;        
     }
 
+    String dimeAutor()
+    {
+        return autor;
+    }
     
+    String dimeTitulo()
+    {
+        return titulo;
+    }
 }
