@@ -5,6 +5,7 @@ public class Libro
     private String autor;
     private int paginas;
     private String numReferencia;
+    private int prestamos;
     
     public Libro(String bkTitulo, String bkAutor, int bkPages, String nmRef)
     {
@@ -12,6 +13,7 @@ public class Libro
         autor = bkAutor;
         paginas = bkPages;
         numReferencia = nmRef;
+        prestamos = 0;
     }
 
     String dimeAutor()
@@ -47,6 +49,8 @@ public class Libro
         else
             cadDetails += ", num de ref: ";
             cadDetails += "ZZZ";
+        cadDetails += ", Prestamos: ";
+        cadDetails += dimePrestamos();
         return cadDetails;
     }
     
@@ -63,5 +67,15 @@ public class Libro
     String dimeNumRef()
     {
         return numReferencia;
+    }
+    
+    void libPrestar()
+    {
+        prestamos+=1;
+    }
+    
+    int dimePrestamos()
+    {
+        return prestamos;
     }
 }
