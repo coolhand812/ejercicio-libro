@@ -7,12 +7,12 @@ public class Libro
     private String numReferencia;
     private int prestamos;
     
-    public Libro(String bkTitulo, String bkAutor, int bkPages, String nmRef)
+    public Libro(String bkTitulo, String bkAutor, int bkPages)
     {
         titulo = bkTitulo;
         autor = bkAutor;
         paginas = bkPages;
-        numReferencia = nmRef;
+        numReferencia = " ";
         prestamos = 0;
     }
 
@@ -57,7 +57,7 @@ public class Libro
     String cambiaNumRef(String nRef)
     {
         int counter = nRef.length();
-        if(counter > 3)
+        if(counter >= 3)
         {
             numReferencia = nRef;
         }
